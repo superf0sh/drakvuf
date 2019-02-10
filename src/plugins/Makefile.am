@@ -171,21 +171,21 @@ sources += plugins.cpp plugins.h
 
 AM_CPPFLAGS = -I$(top_srcdir) -I$(top_srcdir)/src -I$(srcdir)
 AM_CPPFLAGS += $(CPPFLAGS)
-AM_CPPFLAGS += $(CXXFLAGS)
 AM_CPPFLAGS += $(VMI_CFLAGS)
 AM_CPPFLAGS += $(GLIB_CFLAGS)
 
+AM_CXXFLAGS = $(CXXFLAGS)
 #if HARDENING
-AM_CPPFLAGS += $(HARDEN_CFLAGS) -DHARDENING
+AM_CXXFLAGS += $(HARDEN_CFLAGS) -DHARDENING
 #endif
 
 # Note that -pg is incompatible with HARDENING
 if DEBUG
-AM_CPPFLAGS += -DDRAKVUF_DEBUG -Werror -Wall -Wextra -g -ggdb3
-AM_CPPFLAGS += -Wno-missing-field-initializers -Wno-unused-parameter
-AM_CPPFLAGS += -Wno-initializer-overrides
+AM_CXXFLAGS += -DDRAKVUF_DEBUG -Werror -Wall -Wextra -g -ggdb3
+AM_CXXFLAGS += -Wno-missing-field-initializers -Wno-unused-parameter
+AM_CXXFLAGS += -Wno-initializer-overrides
 if !HARDENING
-AM_CPPFLAGS += -pg
+AM_CXXFLAGS += -pg
 endif
 endif
 

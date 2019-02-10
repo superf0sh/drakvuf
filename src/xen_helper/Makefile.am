@@ -105,8 +105,8 @@
 h_sources = xen_helper.h
 c_sources = xen_helper.c
 
-AM_CFLAGS = -I$(top_srcdir)
-AM_CFLAGS += -Werror -Wall -Wextra $(CFLAGS) $(GLIB_CFLAGS)
+AM_CPPFLAGS = -I$(top_srcdir) $(GLIB_CFLAGS)
+AM_CFLAGS = -Werror -Wall -Wextra $(CFLAGS)
 AM_CFLAGS += -Wno-missing-field-initializers
 
 noinst_LTLIBRARIES= libxenhelper.la
