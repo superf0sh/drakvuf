@@ -109,7 +109,7 @@ AM_CPPFLAGS = -I$(top_srcdir) -I$(top_srcdir)/src -I$(srcdir)
 AM_CPPFLAGS += $(VMI_CFLAGS)
 AM_CPPFLAGS += $(GLIB_CFLAGS)
 
-AM_CFLAGS += $(CFLAGS)
+AM_CFLAGS = $(CFLAGS)
 AM_CFLAGS += $(GLIB_LIBS)
 AM_CFLAGS += $(VMI_LIBS)
 
