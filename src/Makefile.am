@@ -113,6 +113,7 @@ injector_SOURCES = injector.c
 AM_CPPFLAGS = $(CPPFLAGS)
 AM_CPPFLAGS += $(VMI_CFLAGS)
 AM_CPPFLAGS += $(GLIB_CFLAGS)
+AM_CPPFLAGS += $(JSON_CFLAGS)
 AM_CPPFLAGS += -I$(top_srcdir) -I$(srcdir)
 
 AM_CFLAGS = $(CFLAGS)
