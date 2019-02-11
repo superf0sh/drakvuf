@@ -112,4 +112,4 @@ distributor_SOURCES = distributor.c
 AM_CPPFLAGS = $(CPPFLAGS) $(GLIB_CFLAGS)
 AM_CFLAGS = -Werror -Wall -Wextra $(CFLAGS)
 AM_CFLAGS += -Wno-missing-field-initializers
-AM_LIBS = $(GLIB_LIBS)
+AM_LDFLAGS = $(LDFLAGS) $(GLIB_LIBS)
